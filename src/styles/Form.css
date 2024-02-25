@@ -1,0 +1,37 @@
+#root {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}  
+
+.form {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 14vw;
+    padding: 5vh;
+    gap: 4vh;
+}
+
+.preview {
+    width: 70vw;
+    border: 1px solid black;
+}
+
+.submitButton {
+    border: solid black;
+    width: fit-content;
+    align-self: center;
+}
+
+.submitButton:hover {
+    background-color: rgb(0 0 0);
+    color: white;
+}

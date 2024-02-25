@@ -1,0 +1,24 @@
+#root {
+    max-width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+.personalInfo {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 20%;
+    height: 100%;
+    background-color: cadetblue;
+}
+
+.eduWorkInfo, .education, .workHistory {
+    width: 80%;
+}
+
+.education, .workHistory {
+    border: 1px solid black;
+}
