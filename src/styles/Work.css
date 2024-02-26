@@ -10,9 +10,10 @@
     flex-wrap: wrap;
     flex: 1 1 auto;
     justify-content: center;
-    border: solid rgb(0, 0, 0, 0.2);
     max-width: 10vw;
-    padding: 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    margin-top: -50px;
 }
 
 .first-row, .second-row, .third-row {
@@ -23,6 +24,7 @@
 .openWork {
     border: solid 1px black;
     width: 14vw ;
+    margin-top: -50px;
 }
 
 .closed {

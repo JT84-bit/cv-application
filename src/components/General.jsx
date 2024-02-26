@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/General.css'
 
-export default function General({firstName, lastName, email, address, phone, linkedin}) {
+export default function General({generalValueS, onChange}) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const showForm = () => {
@@ -16,63 +16,58 @@ export default function General({firstName, lastName, email, address, phone, lin
   if(!isModalOpen){  
   return (
     <>
-    <button onClick={closeForm} className="openEducation">Personal Info</button>
+    <button onClick={closeForm} className="openGeneral">Personal Info</button>
       <div className="general">
-        <div className="name">
         <label>
           Firstname:{' '}
           <input
+          id='firstName'
             type="text"
-            value={firstName}
-            //onChange={handleFirstNameChange}
+            value={generalValueS.firstName}
+            onChange={onChange}
           />
         </label>
 
         <label>
           Lastname:{' '}
-          <input type="text" value={lastName} //onChange={handleLastNameChange}
+          <input type="text" 
+          id='lastName'
+          value={generalValueS.lastName} 
+          onChange={onChange}
            />
-        </label>
-        </div>
-        <div className="secondRow">
-        <label>
-            Address:{' '}
-            <input type="text"
-            value={address}
-            //onChange={handleAddressChange}
-            />
         </label>
         <label>
             Phone:{' '}
             <input type="tel"
-            value={phone}
-            //onChange={handlePhoneChange}
+            id='phone'
+            value={generalValueS.phone}
+            onChange={onChange}
             />
         </label>
-        </div>
-        <div className="thirdRow">
         <label>
             Email:{' '}
             <input type="email"
-            value={email}
-            //onChange={handleEmailChange}
+            id='email'
+            value={generalValueS.email}
+            onChange={onChange}
             />
         </label>
         <label>
-            Linkedin:{' '}
+            Location:{' '}
             <input type="text"
-            value={linkedin}
-            //onChange={handleLinkedinChange}
+            id='address'
+            placeholder='Tampere, Finland'
+            value={generalValueS.address}
+            onChange={onChange}
             />
         </label>
         </div>
-      </div>
     </>
   );
   } else {
     return (
         <>
-        <button onClick={showForm} className="openEducation">Personal Info</button>
+        <button onClick={showForm} className="openGeneral">Personal Info</button>
         </>
     )
   }

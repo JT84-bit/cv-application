@@ -1,19 +1,17 @@
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
-
 .education {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    border: solid rgb(0, 0, 0, 0.2);
     max-width: 10vw;
-    padding: 5vh;
+    padding-right: 5vh;
+    padding-left: 5vh;
+    margin-top: -40px;
+}
+
+.firstRow {
+    margin-top: -40px;
 }
 
 .firstRow, .secondRow, .thirdRow {
@@ -24,5 +22,4 @@
 .openEducation {
     width: 14vw;
     border: 1px solid;
-    margin-bottom: 0;
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import '../styles/Education.css'
 
-export default function Education({degreeTitle, schoolName, dateOfStudy}){
+export default function Education({educationValueS, onChange}){
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const showForm = () => {
@@ -17,30 +17,28 @@ export default function Education({degreeTitle, schoolName, dateOfStudy}){
         <>
         <button onClick={closeForm} className="openEducation">Education</button>
         <div className="education">
-            <div className="firstRow">
                 <label>Name of School:{' '}
                     <input type="text"
-                    value={schoolName}
-                    //onChange={handleSchoolChange}
+                    id="schoolName"
+                    value={educationValueS.schoolName}
+                    onChange={onChange}
                      />
                 </label>
-                <div className="secondRow">
                 <label>Title of Degree:{' '}
                     <input type="text"
-                    value={degreeTitle}
-                    //onChange={handleDegreeChange} 
+                    id="degreeTitle"
+                    value={educationValueS.degreeTitle}
+                    onChange={onChange} 
                     />
                 </label>
-                </div>
-            </div>
-            <div className="thirdRow">
                 <label>Date of Study:{' '}
                     <input type="text"
-                    value={dateOfStudy}
-                    //onChange={handleDateChange} 
+                    id="dateOfStudy"
+                    placeholder="DD/MM/YEAR - DD/MM/YEAR"
+                    value={educationValueS.dateOfStudy}
+                    onChange={onChange} 
                     />
                 </label>
-                </div>
         </div>
         </>
     )

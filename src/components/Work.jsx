@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/Work.css'
 
-export default function Work({company, position, responsibilities, start, until}){
+export default function Work({workValueS, onChange}){
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const showForm = () => {
@@ -17,44 +17,44 @@ export default function Work({company, position, responsibilities, start, until}
             <>
                 <button onClick={closeForm} className='openWork'>Work History</button>
                 <div className='workHistory' >
-                        <div className="firstRow">
                             <label>Company Name:{' '}
                                 <input type="text"
-                                value={company}
-                                //onChange={onChange} 
+                                id='company'
+                                value={workValueS.company}
+                                onChange={onChange} 
                                 />
                             </label>
                             <label>Title of position:{' '}
                                 <input type="text"
-                                value={position}
-                                //onChange={onChange}
+                                id='position'
+                                value={workValueS.position}
+                                onChange={onChange}
                                  />
                             </label>
-                        </div>
-                        <div className="secondRow">
                             <label>Main Responsibilities:{' '}
                                 <input type="text"
-                                       value={responsibilities}
-                                       //onChange={onChange} 
+                                       id='responsibilities'
+                                       value={workValueS.responsibilities}
+                                       onChange={onChange} 
                                        />
                             </label>
-                        </div>
-                        <div className="thirdRow">
                             <label>Start Date:{' '}
-                                <input type="date" 
-                                value={start}
-                                //onChange={onChange}
+                                <input type="text" 
+                                id='start'
+                                placeholder="DD/MM/YEAR"
+                                value={workValueS.start}
+                                onChange={onChange}
                                 />
                             </label>
-                            <div>
+                        
                             <label>Until:{' '}
-                                <input type="date"
-                                value={until}
-                                //onChange={onChange} 
+                                <input type="text"
+                                id='until'
+                                placeholder="DD/MM/YEAR"
+                                value={workValueS.until}
+                                onChange={onChange} 
                                 />
                             </label>
-                            </div>
-                        </div>
                 </div>
             </>
         ); 

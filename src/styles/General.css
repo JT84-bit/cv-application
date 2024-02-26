@@ -1,27 +1,19 @@
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
 
+.openGeneral {
+    border: 1px solid black;
+    margin-bottom: -50px;
+}
 .general {
     display: flex;
     flex-direction: column;
-    border: solid rgb(0, 0, 0, 0.2);
     width: 10vw;
-    padding: 5vh;
-}
-
-.name, .secondRow, .thirdRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 20px;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 input {
     border: none;
     border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    margin-bottom: 10px;
 }
+
